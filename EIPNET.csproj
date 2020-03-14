@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EBFD810F-E29A-4FFB-9242-104334398717}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EIPNET</RootNamespace>
+    <AssemblyName>EIPNET</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+    </Reference>
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+    </Reference>
+    <Reference Include="System.Data">
+    </Reference>
+    <Reference Include="System.Xml">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CIP\CIPKey.cs" />
+    <Compile Include="CIP\CIPType.cs" />
+    <Compile Include="CIP\IOI.cs" />
+    <Compile Include="CIP\ClassCode.cs" />
+    <Compile Include="CIP\CMObject_Attributes.cs" />
+    <Compile Include="CIP\CommonPaths.cs" />
+    <Compile Include="CIP\ConnectionObject_Attributes.cs" />
+    <Compile Include="CIP\ForwardCloseReply.cs" />
+    <Compile Include="CIP\ForwardCloseRequest.cs" />
+    <Compile Include="CIP\ForwardOpenReply.cs" />
+    <Compile Include="CIP\ForwardOpenRequest.cs" />
+    <Compile Include="CIP\GeneralStatus.cs" />
+    <Compile Include="CIP\GeneralStatusCode.cs" />
+    <Compile Include="CIP\GetConnectionDataRequest.cs" />
+    <Compile Include="CIP\GetConnectionDataReply.cs" />
+    <Compile Include="CIP\IdentityItem.cs" />
+    <Compile Include="CIP\InterfaceInformation.cs" />
+    <Compile Include="CIP\LinkConsumer.cs" />
+    <Compile Include="CIP\LinkProducer.cs" />
+    <Compile Include="CIP\MessageRouter.cs" />
+    <Compile Include="CIP\MR_Request.cs" />
+    <Compile Include="CIP\MR_Response.cs" />
+    <Compile Include="CIP\NetworkConnectionParams.cs" />
+    <Compile Include="CIP\ObjectClass.cs" />
+    <Compile Include="CIP\PortSegmentR.cs" />
+    <Compile Include="CIP\RoutingErrors.cs" />
+    <Compile Include="CIP\SearchConnectionDataRequest.cs" />
+    <Compile Include="CIP\Services.cs" />
+    <Compile Include="CIP\SockAddrInfo.cs" />
+    <Compile Include="CIP\UnconnectedSend.cs" />
+    <Compile Include="CIP\UnconnectedSendReply.cs" />
+    <Compile Include="ConnectionManager.cs" />
+    <Compile Include="ControlNetService.cs" />
+    <Compile Include="EIP\CommonPacket.cs" />
+    <Compile Include="EIP\CommonPacketTypeId.cs" />
+    <Compile Include="CIP\ConnectionParameters.cs" />
+    <Compile Include="EIP\EncapsRRData.cs" />
+    <Compile Include="EIP\EncapsUnitData.cs" />
+    <Compile Include="EIP\ListServicesReply.cs" />
+    <Compile Include="EIP\RegisterSession_Reply.cs" />
+    <Compile Include="EIP\SessionInfo.cs" />
+    <Compile Include="EIP\SessionManager.cs" />
+    <Compile Include="EIP\EncapsCommand.cs" />
+    <Compile Include="EIP\EncapsPacket.cs" />
+    <Compile Include="EIP\EncapsPacketFactory.cs" />
+    <Compile Include="EIP\EncapsReply.cs" />
+    <Compile Include="EIP\EncapsStatusCode.cs" />
+    <Compile Include="IDataLinkLayer.cs" />
+    <Compile Include="IExpandable.cs" />
+    <Compile Include="IPackable.cs" />
+    <Compile Include="EIP\ListIdentityReply.cs" />
+    <Compile Include="EIP\ListInterfacesReply.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\strings-fr.Designer.cs">
+      <DependentUpon>strings-fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\strings.Designer.cs">
+      <DependentUpon>strings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\strings-en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings-en.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CIP\CIPModel.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\strings-fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings-fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\strings-en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings-en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties IntelliLock_Configuration="Debug" IntelliLock_ProjectFile="" IntelliLock_Output="[output_dir]EIPNET_Locked\EIPNET.dll" IntelliLock_Settings="" IntelliLock_Store="0" IntelliLock_Enabled="0" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
